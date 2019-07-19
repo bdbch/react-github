@@ -18,8 +18,8 @@
     "src/index.js"
   ],
   "scripts": {
-    "publish": "parcel build docs/example.html",
-    "example": "parcel docs/example.html",
+    "publish": "parcel build docs/index.html",
+    "dev": "parcel docs/index.html",
     "release": "np"
   },
   "devDependencies": {
