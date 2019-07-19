@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "publish": "parcel build docs/index.html",
-    "dev": "parcel docs/index.html",
+    "start": "parcel docs/index.html",
     "release": "np"
   },
   "devDependencies": {
