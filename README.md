@@ -61,3 +61,43 @@ function MyComponent() {
   // your component
 }
 ```
+
+### Get latest release from repo
+
+```js
+import { useLatestRelease } from "@d2k/react-github";
+
+function MyComponent() {
+  const { release, loading, error } = useLatestRelease("facebook", "react");
+
+  // your component
+}
+```
+
+### Get release by tag from repo
+
+```js
+import { useTaggedRelease } from "@d2k/react-github";
+
+function MyComponent() {
+  const { release, loading, error } = useTaggedRelease(
+    "facebook",
+    "react",
+    "v16.8.4"
+  );
+
+  // your component
+}
+```
+
+### List forks from repo
+
+```js
+import { useForks } from "@d2k/react-github";
+
+function MyComponent() {
+  const { forks, loading, error } = useForks("facebook", "react");
+
+  // your component
+}
+```
