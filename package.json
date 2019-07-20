@@ -15,7 +15,8 @@
     "github"
   ],
   "files": [
-    "src/index.js"
+    "src/**/*.js",
+    "src/**/*.json"
   ],
   "scripts": {
     "publish": "parcel build docs/index.html",
