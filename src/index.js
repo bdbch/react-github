@@ -5,6 +5,7 @@ import useBranch from './lib/branch/useBranch'
 import useLatestRelease from './lib/release/useLatestRelease'
 import useTaggedRelease from './lib/release/useTaggedRelease'
 import useForks from './lib/repository/useForks'
+import useCollaborators from './lib/repository/useCollaborators'
 
 export {
   useRepos,
@@ -14,6 +15,7 @@ export {
   useLatestRelease,
   useTaggedRelease,
   useForks,
+  useCollaborators,
 }
 
 export default {
@@ -24,4 +26,5 @@ export default {
   useLatestRelease,
   useTaggedRelease,
   useForks,
+  useCollaborators,
 }
