@@ -2,8 +2,9 @@ import useRepos from './lib/useRepos'
 import useUser from './lib/useUser'
 import useBranches from './lib/branch/useBranches'
 import useBranch from './lib/branch/useBranch'
-import useLatestRelease from './lib/repository/useLatestRelease'
-import useTaggedRelease from './lib/repository/useTaggedRelease'
+import useLatestRelease from './lib/release/useLatestRelease'
+import useTaggedRelease from './lib/release/useTaggedRelease'
+import useForks from './lib/repository/useForks'
 
 export {
   useRepos,
@@ -12,6 +13,7 @@ export {
   useBranch,
   useLatestRelease,
   useTaggedRelease,
+  useForks,
 }
 
 export default {
@@ -21,4 +23,5 @@ export default {
   useBranch,
   useLatestRelease,
   useTaggedRelease,
+  useForks,
 }

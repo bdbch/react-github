@@ -6,6 +6,7 @@ import Branches from "./components/Branches";
 import Branch from "./components/Branch";
 import LatestRelease from "./components/LatestRelease";
 import TaggedRelease from "./components/TaggedRelease";
+import Forks from "./components/Forks";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
       <LatestRelease />
       <hr />
       <TaggedRelease />
+      <hr />
+      <Forks />
       <hr />
     </div>
   );
