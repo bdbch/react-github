@@ -3,32 +3,32 @@ import {
   useEffect
 } from 'react'
 
-export default function useBranches(owner, repo) {
-  const [branches, setBranches] = useState([])
+export default function useTaggedRelease(owner, repo, tag) {
+  const [release, setRelease] = useState(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    if (repo && repo.length > 0 && owner && owner.length) {
-      setLoading(true)
+    if (owner && owner.length > 0 && repo && repo.length > 0 && tag && tag.length > 0) {
       setError(null)
-      fetch(`https://api.github.com/repos/${owner}/${repo}/branches`)
+      setLoading(true)
+
+      fetch(`https://api.github.com/repos/${owner}/${repo}/releases/tags/${tag}`)
         .then(res => res.json())
         .then(data => {
           setLoading(false)
-          setBranches(data)
-          setError(null)
+          setRelease(data)
         })
         .catch(e => {
           setLoading(false)
-          setBranches([])
+          setRelease(null)
           setError(e)
         })
     }
   }, [owner, repo])
 
   return {
-    branches,
+    release,
     loading,
     error
   }

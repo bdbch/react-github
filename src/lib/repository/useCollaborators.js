@@ -3,32 +3,32 @@ import {
   useEffect
 } from 'react'
 
-export default function useBranch(owner, repo, branchName) {
-  const [branch, setBranch] = useState(null)
+export default function useCollaborators(owner, repo) {
+  const [collaborators, setCollaborators] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    if (repo && repo.length > 0 && owner && owner.length && branchName && branchName.length > 0) {
+    if (repo && repo.length > 0 && owner && owner.length) {
       setLoading(true)
       setError(null)
-      fetch(`https://api.github.com/repos/${owner}/${repo}/branches/${branchName}`)
+      fetch(`https://api.github.com/repos/${owner}/${repo}/collaborators`)
         .then(res => res.json())
         .then(data => {
           setLoading(false)
-          setBranch(data)
+          setCollaborators(data)
           setError(null)
         })
         .catch(e => {
           setLoading(false)
-          setBranch(null)
+          setCollaborators([])
           setError(e)
         })
     }
-  }, [owner, repo, branchName])
+  }, [owner, repo])
 
   return {
-    branch,
+    collaborators,
     loading,
     error
   }
