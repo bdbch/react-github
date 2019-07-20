@@ -7,7 +7,7 @@
 ## Links
 
 * [Open Demo](https://d2k-react-github.netlify.com/)
-* [Documentation](/wiki)
+* [Documentation](https://github.com/bdbch/react-github/wiki)
 
 ## Install
 
