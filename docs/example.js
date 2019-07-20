@@ -4,6 +4,7 @@ import Repos from "./components/Repos";
 import User from "./components/User";
 import Branches from "./components/Branches";
 import Branch from "./components/Branch";
+import LatestRelease from "./components/LatestRelease";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
       <Branches />
       <hr />
       <Branch />
+      <hr />
+      <LatestRelease />
       <hr />
     </div>
   );

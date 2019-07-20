@@ -3,7 +3,7 @@ import {
   useEffect
 } from 'react'
 
-export const useBranch = (owner, repo, branchName) => {
+export default function useBranch(owner, repo, branchName) {
   const [branch, setBranch] = useState(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
