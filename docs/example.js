@@ -26,8 +26,6 @@ function App() {
       <hr />
       <Forks />
       <hr />
-      <Collaborators />
-      <hr />
     </div>
   );
 }
