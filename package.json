@@ -17,7 +17,8 @@
   ],
   "files": [
     "src/**/*.js",
-    "src/**/*.json"
+    "src/**/*.json",
+    "types.d.ts"
   ],
   "scripts": {
     "publish": "parcel build docs/index.html",
