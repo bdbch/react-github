@@ -1,6 +1,6 @@
 {
   "name": "@d2k/react-github",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "React hooks for Github API",
   "main": "src/index.js",
   "types": "types.d.ts",
