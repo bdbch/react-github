@@ -21,7 +21,7 @@
     "types.d.ts"
   ],
   "scripts": {
-    "publish": "parcel build docs/index.html",
+    "publish-demo": "parcel build docs/index.html",
     "start": "parcel docs/index.html",
     "release": "np"
   },
