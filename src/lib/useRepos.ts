@@ -2,9 +2,7 @@ import { useEffect, useState } from "react";
 
 import { IGithubRepo, IReposResponse } from "..";
 
-export default function useRepos(
-  githubUserName: string
-): IReposResponse | never[] {
+export default function useRepos(githubUserName: string): IReposResponse {
   const [repos, setRepos] = useState<IGithubRepo[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
