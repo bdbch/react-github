@@ -14,7 +14,7 @@ export default function useLatestRelease(
 
   useEffect(() => {
     if (owner && owner.length > 0 && repo && repo.length > 0) {
-      setError(null);
+      setError(undefined);
       setLoading(true);
 
       fetch(`https://api.github.com/repos/${owner}/${repo}/releases/latest`)

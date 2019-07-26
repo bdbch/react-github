@@ -23,7 +23,7 @@ export default function useBranch(
       branchName.length > 0
     ) {
       setLoading(true);
-      setError(null);
+      setError(undefined);
       fetch(
         `https://api.github.com/repos/${owner}/${repo}/branches/${branchName}`
       )
@@ -31,7 +31,7 @@ export default function useBranch(
         .then(data => {
           setLoading(false);
           setBranch(data);
-          setError(null);
+          setError(undefined);
         })
         .catch(e => {
           setLoading(false);

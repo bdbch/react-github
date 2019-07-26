@@ -15,13 +15,13 @@ export default function useCollaborators(
   useEffect(() => {
     if (repo && repo.length > 0 && owner && owner.length) {
       setLoading(true);
-      setError(null);
+      setError(undefined);
       fetch(`https://api.github.com/repos/${owner}/${repo}/collaborators`)
         .then(res => res.json())
         .then(data => {
           setLoading(false);
           setCollaborators(data);
-          setError(null);
+          setError(undefined);
         })
         .catch(e => {
           setLoading(false);

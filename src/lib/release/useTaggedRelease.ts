@@ -22,7 +22,7 @@ export default function useTaggedRelease(
       tag &&
       tag.length > 0
     ) {
-      setError(null);
+      setError(undefined);
       setLoading(true);
 
       fetch(

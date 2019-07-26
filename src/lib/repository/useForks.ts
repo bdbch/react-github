@@ -10,13 +10,13 @@ export default function useForks(owner: string, repo: string): IForksResponse {
   useEffect(() => {
     if (repo && repo.length > 0 && owner && owner.length) {
       setLoading(true);
-      setError(null);
+      setError(undefined);
       fetch(`https://api.github.com/repos/${owner}/${repo}/forks`)
         .then(res => res.json())
         .then(data => {
           setLoading(false);
           setForks(data);
-          setError(null);
+          setError(undefined);
         })
         .catch(e => {
           setLoading(false);
