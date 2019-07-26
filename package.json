@@ -19,10 +19,10 @@
     "github"
   ],
   "scripts": {
+    "prepublish": "npm run build",
     "start": "tsc --watch",
     "build": "npm run clean && tsc",
-    "clean": "rm -rf ./dist",
-    "publish": "npm run build"
+    "clean": "rm -rf ./dist"
   },
   "devDependencies": {
     "@types/react": "^16.8.23",
