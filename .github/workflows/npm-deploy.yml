@@ -1,0 +1,23 @@
+name: Deploy to NPM
+
+on:
+  push:
+    branches:
+      - releases/*
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '11.x'
+      - name: Setup NPM
+        run: echo '//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}'>.npmrc
+      - name: Install NPM packages
+        run: npm install
+      - name: build
+        run: npm run build
+      - name: publish
+        run: npm publish
